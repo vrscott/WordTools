@@ -1,0 +1,17 @@
+#entry-section {
+    height: 300px;
+    border: 5px;
+}
+
+#word-input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color: lightblue;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}

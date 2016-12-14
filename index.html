@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>WordTools</title>
+        <script src="js/jquery-1.12.3.min.js"></script>
+		<script src="js/jquery.nice-select.js"></script>
+        <script src="js/wordtools.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function generateWords(input) {
+                var select = "1";
+				console.log(input);
+                switch (select) {
+                    case "1":
+                        var result = getAnagrams(input);
+                        break;
+                    case "2":
+                        var result = getHooks(input);
+                        break;
+                    case "3":
+                        var result = getQWithoutU();
+                        break;
+					case "4":
+					    var result = get2LetterWords();
+						break;
+                }
+                console.log(result);
+				return result;
+            }
+        </script>
+    </head>
+    <body onload="loadWords()">
+		  <div id="entry-section">
+		      <input id="word-input" type-"text" placeholder="Enter some letters..." onkeydown="solve(this)"></input>
+	      </div>
+    </body>
+	<script>
+	    function solve(ele) {
+		    if (event.keyCode == 13) {
+			    var result = generateWords(ele.value);
+			    alert(result);
+		    }
+	    }
+    </script>
+</html>
